@@ -3,10 +3,6 @@ import watch from "../assets/watch.png";
 
 import tikets from "../assets/flights.json";
 
-let check = tikets.result.flights;
-
-//console.log(check)
-
 function getTimeFromMins(mins) {
   let hours = Math.trunc(mins / 60);
   let minutes = mins % 60;
@@ -144,7 +140,9 @@ const Tickets = ({ ticketsToRender, onClickMore }) => {
           </div>
         ))}
       </div>
-      <button className='buttonMore' onClick={onClickMore}>Загрузить больше</button>
+      <button className="buttonMore" onClick={onClickMore}>
+        Загрузить больше
+      </button>
     </div>
   );
 };

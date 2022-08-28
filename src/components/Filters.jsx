@@ -18,14 +18,6 @@ const companiesArray = [
   { name: "KLM", value: "KL" },
 ];
 
-// const filterTickets = (tickets, minCost = 0, maxCost = 10000000, transfer = []) => {
-//   tickets.filter((ticket) => {
-//     if ((tickets.legs[0].segments.length = 1))
-//       if (ticket.flight.price?.total?.amount > minCost && ticket.flight?.price?.total?.amount < maxCost) return true;
-//     return false;
-//   });
-// };
-
 const Filters = ({ allTickets, setFiltredAndSortedTickets }) => {
   const [filter, setFilter] = useState({
     orderBy: "",
@@ -34,23 +26,6 @@ const Filters = ({ allTickets, setFiltredAndSortedTickets }) => {
     costTo: 200000,
     companiesCheckbox: [],
   });
-
-  // const onChangeRadio = (event) => {
-  //   setOrderBy(event.target.value);
-  //   switch (orderBy) {
-  //     case 'asc':
-  //       allTickets.map((el) => el.flight.price.total).sort((a, b) => a.amount - b.amount);
-  //       break;
-  //     case 'desc':
-  //       allTickets.map((el) => el.flight.price.total).sort((a, b) => b.amount - a.amount);
-  //       break;
-  //     case 'time':
-  //       allTickets
-  //         .map((el) => el.flight.legs)
-  //         .map((el) => el[0])
-  //         .sort((a, b) => a.duration - b.duration);
-  //   }
-  // };
 
   const handleChange = (event) => {
     const target = event.target;
